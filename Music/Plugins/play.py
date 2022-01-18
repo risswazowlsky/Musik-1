@@ -164,18 +164,18 @@ async def music_onoff(_, message: Message):
             return
         DISABLED_GROUPS.remove(message.chat.id)
         await lel.edit(
-            f"**✅ Music Telah Di Diaktifkan Di {message.chat.title}**"
+            f"**✅ Protector Music Enable {message.chat.title}**"
         )
 
     elif status in ("OFF", "off", "Off"):
         lel = await message.reply("`processing...`")
 
         if message.chat.id in DISABLED_GROUPS:
-            await lel.edit("» **Music Di Nonaktifkan.**")
+            await lel.edit("» **Music Di NonaAktifkan.**")
             return
         DISABLED_GROUPS.append(message.chat.id)
         await lel.edit(
-            f"**✅ Music Telah Di Nonaktifkan Di {message.chat.title}**"
+            f"**✅ Protector Music Disabled {message.chat.title}**"
         )
     else:
         await message.reply_text(
@@ -218,10 +218,10 @@ Kembalikan kembali ke Akun Pengguna Dari Hak Admin.
             """
 Saya perlu menjadi admin dengan beberapa izin:
 
-- **dapat mengelola obrolan suara:** Untuk mengelola obrolan suara
-- **dapat menghapus pesan:** Untuk menghapus Sampah yang Dicari Musik
-- **dapat mengundang pengguna**: Untuk mengundang asisten untuk mengobrol
-- **dapat membatasi anggota**: Untuk Melindungi Musik dari Spam.
+- **Dapat mengelola obrolan suara:** Untuk mengelola obrolan suara
+- **Dapat menghapus pesan:** Untuk menghapus Sampah yang Dicari Musik
+- **Dapat mengundang pengguna**: Untuk mengundang asisten untuk mengobrol
+- **Dapat membatasi anggota**: Untuk Melindungi Musik dari Spam.
 """
         )
         return
@@ -450,7 +450,7 @@ Saya perlu menjadi admin dengan beberapa izin:
                 """
 <b>❌ Lagu tidak ditemukan atau anda tidak menulis judul lagu dengan benar
 
-✅ Contoh Menggunakan Bot
+✅ Contoh Menggunakan Bot Musik
 `/play halu`
 """,
             )
@@ -519,7 +519,7 @@ Saya perlu menjadi admin dengan beberapa izin:
         await message.reply_photo(
             photo=thumb,
             caption=f"""
-<b>💡 Trek ditambahkan ke antrian</b>
+<b>💡 Lagu ditambahkan ke antrian</b>
 
 <b>🏷️ Nama: [{title[:25]}]({link})</b>
 <b>⏱️ Durasi:</b> {duration} \n
@@ -560,7 +560,7 @@ Saya perlu menjadi admin dengan beberapa izin:
             photo=thumb,
             reply_markup=InlineKeyboardMarkup(buttons),
             caption=f"""
-<b>🏷 Nama:</b> [{title[:25]}]({link})
+<b>🏷️ Nama:</b> [{title[:25]}]({link})
 <b>⏱️ Durasi:</b> {duration}
 <b>🎧 Atas permintaan:</b> {checking}
 """,
@@ -710,7 +710,7 @@ async def startyuplay(_, CallbackQuery):
         m = await CallbackQuery.message.reply_photo(
             photo=thumb,
             caption=f"""
-<b>💡 Trek ditambahkan ke antrian</b>
+<b>💡 Lagu ditambahkan ke antrian</b>
 
 <b>🏷 Nama:</b>[{title[:25]}]({url})
 <b>⏱️ Durasi:</b> {duration}

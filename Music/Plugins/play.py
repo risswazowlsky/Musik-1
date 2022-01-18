@@ -164,18 +164,18 @@ async def music_onoff(_, message: Message):
             return
         DISABLED_GROUPS.remove(message.chat.id)
         await lel.edit(
-            f"**✅ Protector Music Enable {message.chat.title}**"
+            f"**✅ Music Telah Di Diaktifkan Di {message.chat.title}**"
         )
 
     elif status in ("OFF", "off", "Off"):
         lel = await message.reply("`processing...`")
 
         if message.chat.id in DISABLED_GROUPS:
-            await lel.edit("» **Music Di NonaAktifkan.**")
+            await lel.edit("» **Music Di Nonaktifkan.**")
             return
         DISABLED_GROUPS.append(message.chat.id)
         await lel.edit(
-            f"**✅ Protector Music Disabled {message.chat.title}**"
+            f"**✅ Music Telah Di Nonaktifkan Di {message.chat.title}**"
         )
     else:
         await message.reply_text(
@@ -218,10 +218,10 @@ Kembalikan kembali ke Akun Pengguna Dari Hak Admin.
             """
 Saya perlu menjadi admin dengan beberapa izin:
 
-- **Dapat mengelola obrolan suara:** Untuk mengelola obrolan suara
-- **Dapat menghapus pesan:** Untuk menghapus Sampah yang Dicari Musik
-- **Dapat mengundang pengguna**: Untuk mengundang asisten untuk mengobrol
-- **Dapat membatasi anggota**: Untuk Melindungi Musik dari Spam.
+- **dapat mengelola obrolan suara:** Untuk mengelola obrolan suara
+- **dapat menghapus pesan:** Untuk menghapus Sampah yang Dicari Musik
+- **dapat mengundang pengguna**: Untuk mengundang asisten untuk mengobrol
+- **dapat membatasi anggota**: Untuk Melindungi Musik dari Spam.
 """
         )
         return
@@ -450,7 +450,7 @@ Saya perlu menjadi admin dengan beberapa izin:
                 """
 <b>❌ Lagu tidak ditemukan atau anda tidak menulis judul lagu dengan benar
 
-✅ Contoh Menggunakan Bot Musik
+✅ Contoh Menggunakan Bot
 `/play halu`
 """,
             )
@@ -484,7 +484,7 @@ Saya perlu menjadi admin dengan beberapa izin:
         thumb ="cache/IMG_20211105_143948_192.jpg"
         buttons = search_markup(ID1, ID2, ID3, ID4, ID5, duration1, duration2, duration3, duration4, duration5, user_id, query)
         await mystic.edit( 
-            f"**✨ Silahkan pilih lagu yang ingin anda putar**\n\n¹ <b>{title1[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n² <b>{title2[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n³ <b>{title3[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n⁴ <b>{title4[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n⁵ <b>{title5[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__",    
+            f"**💥Silahkan pilih lagu yang ingin anda dengar**\n\n¹ <b>{title1[:27]}</b>\n  ┗ 🚥 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n² <b>{title2[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n³ <b>{title3[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n⁴ <b>{title4[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n⁵ <b>{title5[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__",    
             reply_markup=InlineKeyboardMarkup(buttons),
             disable_web_page_preview=True
         )  
@@ -519,7 +519,7 @@ Saya perlu menjadi admin dengan beberapa izin:
         await message.reply_photo(
             photo=thumb,
             caption=f"""
-<b>💡 Lagu ditambahkan ke antrian</b>
+<b>💡 Trek ditambahkan ke antrian</b>
 
 <b>🏷️ Nama: [{title[:25]}]({link})</b>
 <b>⏱️ Durasi:</b> {duration} \n
@@ -560,7 +560,7 @@ Saya perlu menjadi admin dengan beberapa izin:
             photo=thumb,
             reply_markup=InlineKeyboardMarkup(buttons),
             caption=f"""
-<b>🏷️ Nama:</b> [{title[:25]}]({link})
+<b>🏷 Nama:</b> [{title[:25]}]({link})
 <b>⏱️ Durasi:</b> {duration}
 <b>🎧 Atas permintaan:</b> {checking}
 """,
@@ -710,7 +710,7 @@ async def startyuplay(_, CallbackQuery):
         m = await CallbackQuery.message.reply_photo(
             photo=thumb,
             caption=f"""
-<b>💡 Lagu ditambahkan ke antrian</b>
+<b>💡 Trek ditambahkan ke antrian</b>
 
 <b>🏷 Nama:</b>[{title[:25]}]({url})
 <b>⏱️ Durasi:</b> {duration}
@@ -803,7 +803,7 @@ async def popat(_,CallbackQuery):
     if i == 1:
         buttons = search_markup2(ID6, ID7, ID8, ID9, ID10, duration6, duration7, duration8, duration9, duration10 ,user_id, query)
         await CallbackQuery.edit_message_text(
-            f"**✨ Silahkan pilih lagu yang ingin anda putar**\n\n⁶ <b>{title6[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID6})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n⁷ <b>{title7[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID7})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n⁸ <b>{title8[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID8})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n⁹ <b>{title9[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID9})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n¹⁰ <b>{title10[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID10})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__",    
+            f"**🚥 Silahkan pilih lagu yang ingin anda dengarkan**\n\n6 <b>{title6[:27]}</b>\n  ⍟ 🔅 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID6})__</u>\n  ⍟ 🔥 *Musik by* {BOT_NAME}\n\n7 <b>{title7[:27]}</b>\n  ⍟ 🔅 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID7})__</u>\n  ⍟ 🔥 *Musik by* {BOT_NAME}\n\n8 <b>{title8[:27]}</b>\n  ⍟ 🔅 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID8})__</u>\n  ⍟ 🔥 *Musik by* {BOT_NAME}\n\n9 <b>{title9[:27]}</b>\n  ⍟ 🔅 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID9})__</u>\n  ⍟ ⚡ __Musik by {BOT_NAME}__\n\n10 <b>{title10[:27]}</b>\n  ⍟ 🔅 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID10})__</u>\n  ⍟ 🔥 *Musik by* {BOT_NAME}",    
             reply_markup=InlineKeyboardMarkup(buttons),
             disable_web_page_preview=True
         )  
@@ -811,7 +811,7 @@ async def popat(_,CallbackQuery):
     if i == 2:
         buttons = search_markup(ID1, ID2, ID3, ID4, ID5, duration1, duration2, duration3, duration4, duration5, user_id, query)
         await CallbackQuery.edit_message_text(
-            f"**✨ Silahkan pilih lagu yang ingin anda putar**\n\n¹ <b>{title1[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n² <b>{title2[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n³ <b>{title3[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n⁴ <b>{title4[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__\n\n⁵ <b>{title5[:27]}</b>\n  ┗ 💡 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})__</u>\n  ┗ ⚡ __Powered by {BOT_NAME}__",    
+            f"**🚥 Silahkan pilih lagu yang ingin anda dengarkan**\n\n1 <b>{title1[:27]}</b>\n  ⍟ 🔅 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})__</u>\n  ⍟ 🔥 *Musik by* {BOT_NAME}\n\n2 <b>{title2[:27]}</b>\n  ⍟ 🔅 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})__</u>\n  ⍟ 🔥 *Musik by* {BOT_NAME}\n\n3 <b>{title3[:27]}</b>\n  ⍟ 🔅 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})__</u>\n  ⍟ 🔥 *Musik by* {BOT_NAME}__\n\n5 <b>{title4[:27]}</b>\n  ⍟ 🔅 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})__</u>\n  ⍟ 🔥 *Musik by* {BOT_NAME}\n\n5 <b>{title5[:27]}</b>\n  ⍟ 🔅 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})__</u>\n  ⍟ 🔥 *Musik by* {BOT_NAME}",    
             reply_markup=InlineKeyboardMarkup(buttons),
             disable_web_page_preview=True 
         )  

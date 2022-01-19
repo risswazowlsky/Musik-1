@@ -221,7 +221,7 @@ async def play(_, message: Message):
             await app.send_message(
                 chat_id,
                 text=f"""
-**👋Hai {rpk} jika ingin memakai bot ini di haruskan join agar bisa musikan secara bebas**
+**👋Hai {rpk} jika ingin memakai bot ini di haruskan join agar bisa musikan.**
 """,
                 reply_markup=InlineKeyboardMarkup(
                     [
@@ -535,7 +535,7 @@ Unban terlebih dahulu untuk menggunakan
         thumb ="Kekinian.png"
         buttons = search_markup(ID1, ID2, ID3, ID4, ID5, duration1, duration2, duration3, duration4, duration5, user_id, query)
         await mystic.edit( 
-            f"*👋S͏I͏L͏A͏K͏A͏N͏ P͏I͏L͏I͏H͏ L͏A͏G͏U͏ Y͏A͏N͏G͏ I͏N͏G͏I͏N͏ D͏I͏ P͏U͏T͏A͏R͏*\n\n1» <b>{title1}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})__</u>\n\n2» <b>{title2}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})__</u>\n\n3» <b>{title3}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})__</u>\n\n4» <b>{title4}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})__</u>\n\n5» <b>{title5}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})__</u>",    
+            f"👋S͏I͏L͏A͏K͏A͏N͏ P͏I͏L͏I͏H͏ L͏A͏G͏U͏ Y͏A͏N͏G͏ I͏N͏G͏I͏N͏ D͏I͏ P͏U͏T͏A͏R͏\n\n1» <b>{title1}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})__</u>\n\n2» <b>{title2}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})__</u>\n\n3» <b>{title3}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})__</u>\n\n4» <b>{title4}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})__</u>\n\n5» <b>{title5}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})__</u>",    
             reply_markup=InlineKeyboardMarkup(buttons),
             disable_web_page_preview=True
         )  

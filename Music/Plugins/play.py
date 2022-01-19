@@ -221,13 +221,13 @@ async def play(_, message: Message):
             await app.send_message(
                 chat_id,
                 text=f"""
-**👋 ʜᴀʟᴏ​ {rpk} ᴜɴᴛᴜᴋ ᴍᴇɴɢʜɪɴᴅᴀʀɪ ᴘᴇɴɢɢᴜɴᴀᴀɴ ʏᴀɴɢ ʙᴇʀʟᴇʙɪʜᴀɴ ʙᴏᴛ ɪɴɪ ᴅɪ ᴋʜᴜsᴜsᴋᴀɴ ᴜɴᴛᴜᴋ ʏᴀɴɢ sᴜᴅᴀʜ ᴊᴏɪɴ ᴅɪ ᴄʜᴀɴɴᴇʟ ᴋᴀᴍɪ!​!**
+**👋Hai {rpk} jika ingin memakai bot ini di haruskan join agar bisa musikan secara bebas**
 """,
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
                             InlineKeyboardButton(
-                                " ᴊᴏɪɴ ᴄʜ sᴜᴘᴘᴏʀᴛ ",
+                                " Join Channel ",
                                 url=f"https://t.me/{update_channel}",
                             )
                         ]
@@ -248,7 +248,7 @@ Kembalikan kembali ke Akun Pengguna Dari Hak Admin.
     username = message.from_user.first_name
     checking = f"[{message.from_user.first_name}](tg://user?id={message.from_user.id})"
     if await is_on_off(1):
-        LOG_ID = "-100156899495"
+        LOG_ID = "-1001474265666"
         if int(chat_id) != int(LOG_ID):
             return await message.reply_text(
                 f"Bot sedang dalam Pemeliharaan. Maaf untuk ketidaknyamanannya!"
@@ -502,14 +502,14 @@ Unban terlebih dahulu untuk menggunakan
 <b>❌ Lagu tidak ditemukan atau anda tidak menulis judul lagu dengan benar
 
 ✅ Contoh Menggunakan Bot
-`/play Surrender`
+`/play (judul lagu)`
 """,
             )
             return
         what = "Query Given"
         await LOG_CHAT(message, what)
         query = message.text.split(None, 1)[1]
-        mystic = await message.reply_text("**🔎 Pencarian**")
+        mystic = await message.reply_text("**🔎 Mencari List Lagu**")
         try:
             a = VideosSearch(query, limit=5)
             result = (a.result()).get("result")
@@ -535,7 +535,7 @@ Unban terlebih dahulu untuk menggunakan
         thumb ="Kekinian.png"
         buttons = search_markup(ID1, ID2, ID3, ID4, ID5, duration1, duration2, duration3, duration4, duration5, user_id, query)
         await mystic.edit( 
-            f"**🎧 𝐒𝐢𝐥𝐚𝐡𝐤𝐚𝐧 𝐩𝐢𝐥𝐢𝐡 𝐥𝐚𝐠𝐮 𝐲𝐚𝐧𝐠 𝐢𝐧𝐠𝐢𝐧 𝐚𝐧𝐝𝐚 𝐩𝐮𝐭𝐚𝐫 🎧**\n\n1⃣ <b>{title1}</b>\n  ┗ 📚 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})__</u>\n\n2⃣ <b>{title2}</b>\n  ┗ 📚 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})__</u>\n\n3⃣ <b>{title3}</b>\n  ┗ 📚 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})__</u>\n\n4⃣ <b>{title4}</b>\n  ┗ 📚 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})__</u>\n\n5⃣ <b>{title5}</b>\n  ┗ 📚 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})__</u>",    
+            f"*_👋S͏I͏L͏A͏K͏A͏N͏ P͏I͏L͏I͏H͏ L͏A͏G͏U͏ Y͏A͏N͏G͏ I͏N͏G͏I͏N͏ D͏I͏ P͏U͏T͏A͏R͏_*\n\n1» <b>{title1}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})__</u>\n\n2» <b>{title2}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})__</u>\n\n3» <b>{title3}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})__</u>\n\n4» <b>{title4}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})__</u>\n\n5» <b>{title5}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})__</u>",    
             reply_markup=InlineKeyboardMarkup(buttons),
             disable_web_page_preview=True
         )  
@@ -854,7 +854,7 @@ async def popat(_,CallbackQuery):
     if i == 1:
         buttons = search_markup2(ID6, ID7, ID8, ID9, ID10, duration6, duration7, duration8, duration9, duration10 ,user_id, query)
         await CallbackQuery.edit_message_text(
-            f"** 𝐒𝐢𝐥𝐚𝐡𝐤𝐚𝐧 𝐩𝐢𝐥𝐢𝐡 𝐥𝐚𝐠𝐮 𝐲𝐚𝐧𝐠 𝐢𝐧𝐠𝐢𝐧 𝐚𝐧𝐝𝐚 𝐩𝐮𝐭𝐚𝐫  **\n\n6⃣ <b>{title6}</b>\n  ┗ 📚 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID6})__</u>\n\n7⃣ <b>{title7}</b>\n  ┗ 📚 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID7})__</u>\n\n8⃣ <b>{title8}</b>\n  ┗ 📚 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID8})__</u>\n\n9⃣ <b>{title9}</b>\n  ┗ 📚 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID9})__</u>\n\n🔟 <b>{title10}</b>\n  ┗ 📚 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID10})__</u>",    
+            f"_*👋S͏I͏L͏A͏K͏A͏N͏ P͏I͏L͏I͏H͏ L͏A͏G͏U͏ Y͏A͏N͏G͏ I͏N͏G͏I͏N͏ D͏I͏ P͏U͏T͏A͏R͏_*\n\n6» <b>{title6}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID6})__</u>\n\n7» <b>{title7}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID7})__</u>\n\n8» <b>{title8}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID8})__</u>\n\n9» <b>{title9}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID9})__</u>\n\n🔟» <b>{title10}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID10})__</u>",    
             reply_markup=InlineKeyboardMarkup(buttons),
             disable_web_page_preview=True
         )  
@@ -862,7 +862,7 @@ async def popat(_,CallbackQuery):
     if i == 2:
         buttons = search_markup(ID1, ID2, ID3, ID4, ID5, duration1, duration2, duration3, duration4, duration5, user_id, query)
         await CallbackQuery.edit_message_text(
-            f"**  𝐒𝐢𝐥𝐚𝐡𝐤𝐚𝐧 𝐩𝐢𝐥𝐢𝐡 𝐥𝐚𝐠𝐮 𝐲𝐚𝐧𝐠 𝐢𝐧𝐠𝐢𝐧 𝐚𝐧𝐝𝐚 𝐩𝐮𝐭𝐚𝐫  **\n\n1⃣ <b>{title1}</b>\n  ┗ 📚 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})__</u>\n\n2⃣ <b>{title2}</b>\n  ┗ 📚 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})__</u>\n\n3⃣ <b>{title3}</b>\n  ┗ 📚 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})__</u>\n\n4⃣ <b>{title4}</b>\n  ┗ 📚 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})__</u>\n\n5⃣ <b>{title5}</b>\n  ┗ 📚 <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})__</u>",    
+            f"*_S͏I͏L͏A͏K͏A͏N͏ P͏I͏L͏I͏H͏ L͏A͏G͏U͏ Y͏A͏N͏G͏ I͏N͏G͏I͏N͏ D͏I͏ P͏U͏T͏A͏R͏_*\n\n1» <b>{title1}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})__</u>\n\n2» <b>{title2}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})__</u>\n\n3» <b>{title3}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})__</u>\n\n4» <b>{title4}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})__</u>\n\n5» <b>{title5}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})__</u>",    
             reply_markup=InlineKeyboardMarkup(buttons),
             disable_web_page_preview=True 
         )  

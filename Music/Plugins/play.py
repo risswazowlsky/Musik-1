@@ -221,13 +221,13 @@ async def play(_, message: Message):
             await app.send_message(
                 chat_id,
                 text=f"""
-**👋Hai {rpk} jika ingin memakai bot ini di haruskan join agar bisa musikan.**
+**👋Hai {rpk} agar bisa memutar lagu silakan subscribe terlebih dahulu.**
 """,
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
                             InlineKeyboardButton(
-                                " Join Channel ",
+                                " 💡 Subscribe ",
                                 url=f"https://t.me/{update_channel}",
                             )
                         ]

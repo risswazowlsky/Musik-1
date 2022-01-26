@@ -221,14 +221,17 @@ async def play(_, message: Message):
             await app.send_message(
                 chat_id,
                 text=f"""
-**👋Hai {rpk} agar bisa memutar lagu silakan subscribe terlebih dahulu.**
+**👋Hai {rpk} untuk memakai Bot Music anda harus bergabung terlebih dahulu.**
 """,
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
                             InlineKeyboardButton(
-                                " 💡 Subscribe ",
+                                " 💡 Channel Support ",
                                 url=f"https://t.me/{update_channel}",
+                             InlineKeyboardButton(
+                                " ☕ Grup Support ",
+                                url=f"https://t.me/WarnerSupport",
                             )
                         ]
                     ]
@@ -854,7 +857,9 @@ async def popat(_,CallbackQuery):
     if i == 1:
         buttons = search_markup2(ID6, ID7, ID8, ID9, ID10, duration6, duration7, duration8, duration9, duration10 ,user_id, query)
         await CallbackQuery.edit_message_text(
-            f"*👋S͏I͏L͏A͏K͏A͏N͏ P͏I͏L͏I͏H͏ L͏A͏G͏U͏ Y͏A͏N͏G͏ I͏N͏G͏I͏N͏ D͏I͏ P͏U͏T͏A͏R͏*\n\n6» <b>{title6}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID6})__</u>\n\n7» <b>{title7}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID7})__</u>\n\n8» <b>{title8}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID8})__</u>\n\n9» <b>{title9}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID9})__</u>\n\n🔟» <b>{title10}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID10})__</u>",    
+            f"*✨𝗦𝗜𝗟𝗔𝗞𝗔𝗡 𝗣𝗜𝗟𝗜𝗛 𝗟𝗔𝗚𝗨 𝗬𝗔𝗡𝗚 𝗜𝗡𝗚𝗜𝗡 𝗔𝗡𝗗𝗔 𝗗𝗘𝗡𝗚𝗔𝗥𝗞𝗔𝗡 𝗗𝗜.
+
+✨𝗣𝗘𝗡𝗖𝗘𝗧 𝗧𝗢𝗠𝗕𝗢𝗟 𝗗𝗜 𝗕𝗔𝗪𝗔𝗛.\n\n6 » <b>{title6}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID6})__</u>\n\n7 » <b>{title7}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID7})__</u>\n\n8 » <b>{title8}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID8})__</u>\n\n9 » <b>{title9}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID9})__</u>\n\n🔟» <b>{title10}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID10})__</u>",    
             reply_markup=InlineKeyboardMarkup(buttons),
             disable_web_page_preview=True
         )  
@@ -862,7 +867,9 @@ async def popat(_,CallbackQuery):
     if i == 2:
         buttons = search_markup(ID1, ID2, ID3, ID4, ID5, duration1, duration2, duration3, duration4, duration5, user_id, query)
         await CallbackQuery.edit_message_text(
-            f"*👋S͏I͏L͏A͏K͏A͏N͏ P͏I͏L͏I͏H͏ L͏A͏G͏U͏ Y͏A͏N͏G͏ I͏N͏G͏I͏N͏ D͏I͏ P͏U͏T͏A͏R͏*\n\n1» <b>{title1}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})__</u>\n\n2» <b>{title2}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})__</u>\n\n3» <b>{title3}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})__</u>\n\n4» <b>{title4}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})__</u>\n\n5» <b>{title5}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})__</u>",    
+            f"✨𝗦𝗜𝗟𝗔𝗞𝗔𝗡 𝗣𝗜𝗟𝗜𝗛 𝗟𝗔𝗚𝗨 𝗬𝗔𝗡𝗚 𝗜𝗡𝗚𝗜𝗡 𝗔𝗡𝗗𝗔 𝗗𝗘𝗡𝗚𝗔𝗥𝗞𝗔𝗡 𝗗𝗜.
+
+✨𝗣𝗘𝗡𝗖𝗘𝗧 𝗧𝗢𝗠𝗕𝗢𝗟 𝗗𝗜 𝗕𝗔𝗪𝗔𝗛.\n\n1 » <b>{title1}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID1})__</u>\n\n2 » <b>{title2}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID2})__</u>\n\n3 » <b>{title3}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID3})__</u>\n\n4 » <b>{title4}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID4})__</u>\n\n5 » <b>{title5}</b>\n  ┗ ⚡ <u>__[More Information](https://t.me/{BOT_USERNAME}?start=info_{ID5})__</u>",    
             reply_markup=InlineKeyboardMarkup(buttons),
             disable_web_page_preview=True 
         )  

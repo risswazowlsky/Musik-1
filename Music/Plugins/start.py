@@ -591,4 +591,3 @@ async def start_markup_check(_, CallbackQuery):
         await CallbackQuery.answer(
             f"Disk Usage: {diske}%", show_alert=True
         )
-𝘚𝘜𝘗𝘗𝘖𝘙𝘛

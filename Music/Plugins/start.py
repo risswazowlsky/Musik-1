@@ -71,24 +71,6 @@ def start_pannel():
             return
     if message.sender_chat:
         return await message.reply_text(
-    buttons = [
-        [
-            InlineKeyboardButton(text="Support", url=f"https://t.me/{GROUP}"),
-            InlineKeyboardButton(text="Update", url=f"https://t.me/{CHANNEL}"),
-        ],
-        [
-            InlineKeyboardButton("🔴 Command&Help 🔴", url="https://telegra.ph/ҡʏʏ-ᴇx-12-15"),
-        ],
-        [
-            InlineKeyboardButton("Pemilik 👋", url="https://t.me/ZenxMato"),
-        ],
-    ]
-    return (
-        "💡 **{BOT_NAME} Merupakan Bot Untuk Mengelola Groups, tetapi ada fitur Musik juga**",
-        buttons,
-    )
-
-
 pstart_markup = InlineKeyboardMarkup(
     [
         [

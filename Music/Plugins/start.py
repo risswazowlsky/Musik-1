@@ -62,14 +62,14 @@ pstart_markup = InlineKeyboardMarkup(
                 "➕ Tambahkan Saya Kedalam Grup Anda ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),
         ],
         [
-            InlineKeyboardButton(text="💫Support​", url=f"https://t.me/{GROUP}"),
-            InlineKeyboardButton("💫Update", url=f"https://t.me/{CHANNEL}"),
+            InlineKeyboardButton(text="🔗𝘚𝘜𝘗𝘗𝘖𝘙𝘛​", url=f"https://t.me/{GROUP}"),
+            InlineKeyboardButton("☕ 𝗨𝗽𝗱𝗮𝘁𝗲", url=f"https://t.me/{CHANNEL}"),
         ],
         [
-            InlineKeyboardButton("🔴 Command&Help 🔴", url="https://telegra.ph/ҡʏʏ-ᴇx-12-15"),
+            InlineKeyboardButton("💡 HELP COMMAND ", url="https://telegra.ph/ҡʏʏ-ᴇx-12-15"),
         ],
         [
-            InlineKeyboardButton("Pemilik 👋", url="https://t.me/ZenxMato"),
+            InlineKeyboardButton("✨𝗢𝗪𝗡𝗘𝗥✨", url="https://t.me/ZenxMato"),
         ],
     ]
 )
@@ -83,7 +83,7 @@ async def welcome(_, message: Message):
         try:
             if member.id in OWNER:
                 return await message.reply_text(
-                    f"💡 Pemilik Bot [{member.mention}] baru saja bergabung di grup ini."
+                    f"⭐ 𝗢𝗪𝗡𝗘𝗥 [{member.mention}] baru saja bergabung di grup ini."
                 )
             if member.id in SUDOERS:
                 return await message.reply_text(
@@ -591,3 +591,4 @@ async def start_markup_check(_, CallbackQuery):
         await CallbackQuery.answer(
             f"Disk Usage: {diske}%", show_alert=True
         )
+𝘚𝘜𝘗𝘗𝘖𝘙𝘛

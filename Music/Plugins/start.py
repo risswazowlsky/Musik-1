@@ -39,18 +39,18 @@ from pyrogram.types import (
 def start_pannel():
     buttons = [
         [
-            InlineKeyboardButton(text="SUPPORT", url=f"https://t.me/{GROUP}"),
+            InlineKeyboardButton(text="Support", url=f"https://t.me/{GROUP}"),
             InlineKeyboardButton(text="Update", url=f"https://t.me/{CHANNEL}"),
         ],
         [
-            InlineKeyboardButton("🔴 Command&Help 🔴", url="https://telegra.ph/ҡʏʏ-ᴇx-12-15"),
+            InlineKeyboardButton("💡 HELP COMMAND", url="https://telegra.ph/ҡʏʏ-ᴇx-12-15"),
         ],
         [
-            InlineKeyboardButton("Pemilik 👋", url="https://t.me/ZenxMato"),
+            InlineKeyboardButton("✨𝗢𝗪𝗡𝗘𝗥✨", url="https://t.me/ZenxMato"),
         ],
     ]
     return (
-        "💡 **{BOT_NAME} Merupakan Bot Untuk Mengelola Groups, tetapi ada fitur Musik juga**",
+        "💡 **{BOT_NAME} Merupakan Bot Untuk Mendengarkan Musik.**",
         buttons,
     )
 

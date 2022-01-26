@@ -59,10 +59,10 @@ pstart_markup = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
-                "➕ Tambahkan Saya Kedalam Grup Anda ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),
+                "⛔ 𝗧𝗮𝗺𝗯𝗮𝗵𝗸𝗮𝗻 𝘀𝗮𝘆𝗮", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),
         ],
         [
-            InlineKeyboardButton(text="🔗𝘚𝘜𝘗𝘗𝘖𝘙𝘛​", url=f"https://t.me/{GROUP}"),
+            InlineKeyboardButton(text="☕𝗦𝘂𝗽𝗽𝗼𝗿𝘁​", url=f"https://t.me/{GROUP}"),
             InlineKeyboardButton("☕ 𝗨𝗽𝗱𝗮𝘁𝗲", url=f"https://t.me/{CHANNEL}"),
         ],
         [
@@ -138,11 +138,11 @@ async def play(_, message: Message):
         await app.send_message(
             message.chat.id,
             text=f"""
-**✨ Selamat Datang {rpk}!
+**✨ Hello {rpk}!
 
-💬 [{BOT_NAME}](tg://user?id=2129034376) memungkinkan anda untuk memutar musik pada grup melalui obrolan suara yang baru di Telegram!
+⭐ [{BOT_NAME}](tg://user?id=2129034376) Dapat mendengarkan lagu di dalam Obrolan Suara Grup.
 
-💡 Untuk Mengetahui Semua Perintah Bot Dan Bagaimana Cara Kerja Nya Dengan Menekan Tombol » 🔴 Command&Help​!**
+⚡ Untuk Mengetahui Semua Perintah » 💡 HELP COMMAND**
 
 """,
             parse_mode="markdown",

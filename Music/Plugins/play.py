@@ -229,9 +229,6 @@ async def play(_, message: Message):
                             InlineKeyboardButton(
                                 " 💡 Channel Support ",
                                 url=f"https://t.me/{update_channel}",
-                             InlineKeyboardButton(
-                                " ☕ Grup Support ",
-                                url=f"https://t.me/WarnerSupport",
                             )
                         ]
                     ]

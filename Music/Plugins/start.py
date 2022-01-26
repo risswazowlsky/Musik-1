@@ -37,39 +37,6 @@ from pyrogram.types import (
 
 
 def start_pannel():
-    update_channel = UPDATES_CHANNEL
-    if update_channel:
-        try:
-            user = await app.get_chat_member(update_channel, user_id)
-            if user.status == "kicked":
-                await app.send_message(
-                    chat_id,
-                    text=f"**❌ Anda telah di ban\nUbtuk menggunakan bot anda harus join di [Group](https://t.me/{UPDATES_CHANNEL})**",
-                    parse_mode="markdown",
-                    disable_web_page_preview=True,
-                )
-                return
-        except UserNotParticipant:
-            await app.send_message(
-                chat_id,
-                text=f"""
-**👋Hai {rpk} agar bisa memutar lagu silakan subscribe terlebih dahulu.**
-""",
-                reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                            InlineKeyboardButton(
-                                " 💡 Subscribe ",
-                                url=f"https://t.me/{update_channel}",
-                            )
-                        ]
-                    ]
-                ),
-                parse_mode="markdown",
-            )
-            return
-    if message.sender_chat:
-        return await message.reply_text(
     buttons = [
         [
             InlineKeyboardButton(text="Support", url=f"https://t.me/{GROUP}"),

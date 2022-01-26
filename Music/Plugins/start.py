@@ -39,7 +39,7 @@ from pyrogram.types import (
 def start_pannel():
     buttons = [
         [
-            InlineKeyboardButton(text="Support", url=f"https://t.me/{GROUP}"),
+            InlineKeyboardButton(text="SUPPORT", url=f"https://t.me/{GROUP}"),
             InlineKeyboardButton(text="Update", url=f"https://t.me/{CHANNEL}"),
         ],
         [

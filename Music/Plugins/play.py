@@ -212,7 +212,7 @@ async def play(_, message: Message):
             if user.status == "kicked":
                 await app.send_message(
                     chat_id,
-                    text=f"**❌ Anda telah di ban\nUbtuk menggunakan bot anda harus join di [Group](https://t.me/{UPDATES_CHANNEL})**",
+                    text=f"**❌ Anda telah di ban\nUbtuk menggunakan bot anda harus join di [Group](https://t.me/{UPDATE_CHANNEL})**",
                     parse_mode="markdown",
                     disable_web_page_preview=True,
                 )
